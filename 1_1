@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <conio.h>
+#include <stdlib.h>
+#include <locale.h>
+int main() {
+	setlocale(LC_ALL, "RUS");
+	int mas[9] = { 10,20,30,40,50,60,70,80,90};
+	int min, max;
+	min = mas[0];
+	max = mas[0];
+	for (int i = 0; i < 9; i++) {
+		printf(" %d", mas[i]);
+	}
+	printf("");
+	for (int i = 0; i < 9; i++) {
+		if (mas[i] > max) {
+			max = mas[i];
+
+		}
+		if (mas[i] < min) {
+			min = mas[i];
+
+		}
+	}
+	printf("\n Разница равна %d", max - min);
+	_getch();
+}
