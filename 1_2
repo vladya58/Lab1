@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <stdlib.h>     
+#include <time.h>       
+
+int main()
+{
+    srand(time(NULL));      
+    const int size = 10;    
+    int mas[size];         
+    int i;
+
+    
+    for (i = 0; i < size; i++)
+        mas[i] = rand() % 101;
+
+ 
+    for (i = 0; i < size; i++)
+        printf("%3d", mas[i]);
+    printf("\n");
+
+    return 0;   
+}
