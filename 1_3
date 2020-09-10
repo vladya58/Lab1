@@ -1,0 +1,24 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdlib.h>
+
+#include <stdio.h>
+#include <conio.h>
+#include <locale.h>
+#include <time.h>
+int main() {
+	setlocale(LC_ALL, "RUS");
+	int* mas;
+	int size;
+	printf("Введите размер массива\n");
+	scanf("%d", &size);
+	mas = (int*)malloc(size * sizeof(int));
+	for (int i = 0; i < size; i++) {
+		printf("Введите число \n", i);
+		scanf("%d", &mas[i]);
+	}
+	for (int i = 0; i < size; i++) {
+		printf("%d ", mas[i]);
+
+	}
+	_getch();
+}
